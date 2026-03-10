@@ -1,0 +1,53 @@
+@host = http://localhost:5000
+
+### Health check
+GET {{host}}/health
+Accept: application/json
+
+### Enviar formulario de contacto (test válido)
+POST {{host}}/api/contact
+Content-Type: application/json
+
+{
+  "nombre": "Juan García",
+  "email": "juan@example.com",
+  "telefono": "612 345 678",
+  "empresa": "Mi Empresa S.L.",
+  "mensaje": "Hola, necesito información sobre el servicio de mantenimiento integral para nuestra oficina de 20 ordenadores."
+}
+
+### Enviar formulario sin empresa (campo opcional)
+POST {{host}}/api/contact
+Content-Type: application/json
+
+{
+  "nombre": "María López",
+  "email": "maria@example.com",
+  "telefono": "666 777 888",
+  "empresa": null,
+  "mensaje": "Tengo un problema urgente con mi servidor. Necesito asistencia lo antes posible."
+}
+
+### Validación: campos vacíos (debe devolver 400)
+POST {{host}}/api/contact
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "email": "",
+  "telefono": "",
+  "empresa": null,
+  "mensaje": ""
+}
+
+### Validación: email inválido (debe devolver 400)
+POST {{host}}/api/contact
+Content-Type: application/json
+
+{
+  "nombre": "Test",
+  "email": "not-an-email",
+  "telefono": "612345678",
+  "empresa": null,
+  "mensaje": "Este es un mensaje de prueba con email inválido."
+}
