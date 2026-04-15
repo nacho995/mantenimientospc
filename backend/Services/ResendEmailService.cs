@@ -74,78 +74,59 @@ public sealed class ResendEmailService : IEmailService
         return $"""
             <!DOCTYPE html>
             <html lang="es">
-            <head><meta charset="utf-8"></head>
-            <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; padding: 32px;">
-              <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                
-                <!-- Header -->
-                <div style="background: linear-gradient(135deg, #0e7490, #06b6d4); padding: 32px; text-align: center;">
-                  <h1 style="color: white; margin: 0; font-size: 22px; font-weight: 600;">
-                    Nuevo mensaje de contacto
-                  </h1>
-                  <p style="color: rgba(255,255,255,0.85); margin: 8px 0 0; font-size: 14px;">
-                    Recibido el {now:dd/MM/yyyy} a las {now:HH:mm}h
-                  </p>
-                </div>
-
-                <!-- Body -->
-                <div style="padding: 32px;">
-                  <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; width: 120px; vertical-align: top;">
-                        Nombre
-                      </td>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px;">
-                        {Sanitize(request.Nombre)}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: top;">
-                        Email
-                      </td>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px;">
-                        <a href="mailto:{Sanitize(request.Email)}" style="color: #0e7490; text-decoration: none;">
-                          {Sanitize(request.Email)}
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: top;">
-                        Teléfono
-                      </td>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px;">
-                        <a href="tel:{Sanitize(request.Telefono)}" style="color: #0e7490; text-decoration: none;">
-                          {Sanitize(request.Telefono)}
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: top;">
-                        Empresa
-                      </td>
-                      <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 15px;">
-                        {empresa}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 12px 16px; color: #64748b; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: top;">
-                        Mensaje
-                      </td>
-                      <td style="padding: 12px 16px; color: #1e293b; font-size: 15px; line-height: 1.6;">
-                        {Sanitize(request.Mensaje).Replace("\n", "<br>")}
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-                <!-- Footer -->
-                <div style="background: #f1f5f9; padding: 20px 32px; text-align: center;">
-                  <p style="color: #94a3b8; font-size: 12px; margin: 0;">
-                    Este email fue generado automáticamente desde el formulario de contacto de
-                    <strong>mantenimientopcmadrid.es</strong>
-                  </p>
-                </div>
-              </div>
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>Nuevo mensaje de contacto</title>
+            </head>
+            <body style="margin:0;padding:0;background-color:#f8fafc;font-family:Arial,Helvetica,sans-serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8fafc;padding:24px 12px;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+                      <tr>
+                        <td style="background-color:#0e7490;padding:28px 24px;text-align:center;border-top-left-radius:8px;border-top-right-radius:8px;">
+                          <h1 style="margin:0;color:#ffffff;font-size:20px;font-weight:700;font-family:Arial,Helvetica,sans-serif;">Nuevo mensaje de contacto</h1>
+                          <p style="margin:6px 0 0;color:#cffafe;font-size:13px;font-family:Arial,Helvetica,sans-serif;">Recibido el {now:dd/MM/yyyy} a las {now:HH:mm}h</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:24px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;" valign="top">Nombre</td>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#1e293b;font-size:14px;font-family:Arial,Helvetica,sans-serif;" valign="top">{Sanitize(request.Nombre)}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;" valign="top">Email</td>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#1e293b;font-size:14px;font-family:Arial,Helvetica,sans-serif;" valign="top"><a href="mailto:{Sanitize(request.Email)}" style="color:#0e7490;text-decoration:none;">{Sanitize(request.Email)}</a></td>
+                            </tr>
+                            <tr>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;" valign="top">Teléfono</td>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#1e293b;font-size:14px;font-family:Arial,Helvetica,sans-serif;" valign="top"><a href="tel:{Sanitize(request.Telefono)}" style="color:#0e7490;text-decoration:none;">{Sanitize(request.Telefono)}</a></td>
+                            </tr>
+                            <tr>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;" valign="top">Empresa</td>
+                              <td style="padding:10px 0;border-bottom:1px solid #e2e8f0;color:#1e293b;font-size:14px;font-family:Arial,Helvetica,sans-serif;" valign="top">{empresa}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:14px 0 6px;color:#64748b;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;" valign="top" colspan="2">Mensaje</td>
+                            </tr>
+                            <tr>
+                              <td style="padding:6px 0 0;color:#1e293b;font-size:14px;line-height:1.6;font-family:Arial,Helvetica,sans-serif;" valign="top" colspan="2">{Sanitize(request.Mensaje).Replace("\n", "<br>")}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f1f5f9;padding:16px 24px;text-align:center;border-bottom-left-radius:8px;border-bottom-right-radius:8px;">
+                          <p style="margin:0;color:#94a3b8;font-size:11px;font-family:Arial,Helvetica,sans-serif;">Email generado automáticamente desde el formulario de contacto de <strong>mantenimientospc.com</strong></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
             </body>
             </html>
             """;
@@ -171,7 +152,7 @@ public sealed class ResendEmailService : IEmailService
         sb.AppendLine(request.Mensaje.Trim());
         sb.AppendLine();
         sb.AppendLine("---");
-        sb.AppendLine("Enviado desde el formulario de contacto de mantenimientopcmadrid.es");
+        sb.AppendLine("Enviado desde el formulario de contacto de mantenimientospc.com");
 
         return sb.ToString();
     }
