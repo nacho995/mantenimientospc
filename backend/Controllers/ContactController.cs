@@ -46,7 +46,7 @@ public sealed class ContactController : ControllerBase
             return BadRequest(new ApiError { Message = errors[0] });
         }
 
-        // 2. Enviar email
+        // 2. Enviar notificación al admin
         var sent = await _emailService.SendContactNotificationAsync(request, ct);
         if (!sent)
         {
@@ -54,7 +54,14 @@ public sealed class ContactController : ControllerBase
                 new ApiError { Message = "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo o llámanos directamente." });
         }
 
-        // 3. Respuesta exitosa
+        // 3. Enviar confirmación al usuario (fire-and-forget: si falla no rompe el flujo)
+        var confirmed = await _emailService.SendContactConfirmationAsync(request, ct);
+        if (!confirmed)
+        {
+            _logger.LogWarning("Notificación enviada pero la confirmación al usuario falló. Email: {Email}", request.Email);
+        }
+
+        // 4. Respuesta exitosa
         return Ok(new ContactResponse
         {
             Message = "Mensaje enviado correctamente. Nos pondremos en contacto contigo lo antes posible."

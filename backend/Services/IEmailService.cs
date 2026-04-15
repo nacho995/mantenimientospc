@@ -17,4 +17,10 @@ public interface IEmailService
     /// <param name="ct">Cancellation token.</param>
     /// <returns>True si el envío fue exitoso.</returns>
     Task<bool> SendContactNotificationAsync(ContactRequest request, CancellationToken ct = default);
+
+    /// <summary>
+    /// Envía un email de confirmación al usuario que rellenó el formulario,
+    /// indicándole que su mensaje ha sido recibido.
+    /// </summary>
+    Task<bool> SendContactConfirmationAsync(ContactRequest request, CancellationToken ct = default);
 }
