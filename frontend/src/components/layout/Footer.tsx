@@ -14,7 +14,7 @@ export function Footer(): React.JSX.Element {
         <div className="footer__top">
           <div className="footer__brand">
             <div className="footer__brand-logo">
-              <img src="/logo.jpeg" alt="Mantenimiento PC" width="64" height="64" style={{ borderRadius: '10px', objectFit: 'contain' }} />
+              <img src="/logo.jpeg" alt="Mantenimiento PC" width="80" height="80" style={{ borderRadius: '12px', objectFit: 'contain', boxShadow: '0 4px 20px rgba(14, 116, 144, 0.3)' }} />
               <div>
                 <p className="footer__name">
                   Mantenimiento<strong>PC</strong> Madrid
