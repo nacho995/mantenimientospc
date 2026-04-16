@@ -47,12 +47,7 @@ export function Navbar(): React.JSX.Element {
       <div className="navbar__container">
         <a href="#inicio" className="navbar__brand" onClick={() => handleNavClick('#inicio')}>
           <div className="navbar__logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="8" fill="var(--primary)" />
-              <path d="M8 10h16M8 16h10M8 22h13" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-              <circle cx="23" cy="22" r="4" fill="white" opacity="0.9"/>
-              <path d="M21.5 22l1 1 2-2" stroke="var(--primary)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <img src="/logo.jpeg" alt="Mantenimiento PC" width="36" height="36" style={{ borderRadius: '8px' }} />
           </div>
           <span className="navbar__name">Mantenimiento<strong>PC</strong></span>
         </a>
