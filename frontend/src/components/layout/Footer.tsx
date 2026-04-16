@@ -13,12 +13,17 @@ export function Footer(): React.JSX.Element {
         {/* Top section */}
         <div className="footer__top">
           <div className="footer__brand">
-            <p className="footer__name">
-              Mantenimiento<strong>PC</strong> Madrid
-            </p>
-            <p className="footer__tagline">
-              Tecnologia de confianza desde 1995. Tu partner IT en Madrid.
-            </p>
+            <div className="footer__brand-logo">
+              <img src="/logo.jpeg" alt="Mantenimiento PC" width="64" height="64" style={{ borderRadius: '10px', objectFit: 'contain' }} />
+              <div>
+                <p className="footer__name">
+                  Mantenimiento<strong>PC</strong> Madrid
+                </p>
+                <p className="footer__tagline">
+                  Tecnologia de confianza desde 1995. Tu partner IT en Madrid.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="footer__cta-group">
             <button

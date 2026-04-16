@@ -3294,6 +3294,11 @@ ul { list-style: none; }
   padding-bottom: 64px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+.footer__brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 .footer__name {
   font-size: 24px;
   font-weight: 600;
