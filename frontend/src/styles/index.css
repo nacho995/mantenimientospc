@@ -1,5 +1,5 @@
 /* ================================================================
-   MantenimientoPC Madrid — ELITE WORLD-CLASS DESIGN SYSTEM
+   MantenimientosPC Madrid — ELITE WORLD-CLASS DESIGN SYSTEM
    Nivel: Stripe × Linear × Vercel × Framer combinados
    Diseño de agencia premium de primer nivel mundial
    ================================================================ */
@@ -433,7 +433,7 @@ ul { list-style: none; }
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 40px;
-  height: 90px;
+  height: 140px;
 }
 
 .navbar__brand {
@@ -447,15 +447,22 @@ ul { list-style: none; }
 }
 .navbar__logo {
   flex-shrink: 0;
-  filter: drop-shadow(0 4px 12px rgba(14, 116, 144, 0.35));
+  position: relative;
+  filter: drop-shadow(0 8px 24px rgba(14, 116, 144, 0.55)) drop-shadow(0 0 14px rgba(14, 165, 189, 0.35));
   transition: filter var(--duration-normal), transform var(--duration-normal);
+  animation: logoGlowPulse 2.8s ease-in-out infinite;
 }
 .navbar__logo img {
   display: block;
+  border: 3px solid rgba(14, 165, 189, 0.55);
 }
 .navbar__brand:hover .navbar__logo {
-  filter: drop-shadow(0 6px 20px rgba(14, 116, 144, 0.5));
-  transform: scale(1.05);
+  filter: drop-shadow(0 12px 32px rgba(14, 116, 144, 0.75)) drop-shadow(0 0 22px rgba(14, 165, 189, 0.6));
+  transform: scale(1.06);
+}
+@keyframes logoGlowPulse {
+  0%, 100% { filter: drop-shadow(0 8px 24px rgba(14, 116, 144, 0.55)) drop-shadow(0 0 14px rgba(14, 165, 189, 0.35)); }
+  50% { filter: drop-shadow(0 10px 30px rgba(14, 116, 144, 0.7)) drop-shadow(0 0 24px rgba(14, 165, 189, 0.65)); }
 }
 .navbar__name {
   font-size: 22px;

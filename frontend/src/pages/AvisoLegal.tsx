@@ -24,7 +24,7 @@ export function AvisoLegal(): React.JSX.Element {
       <section>
         <h2>2. Objeto</h2>
         <p>
-          El presente Aviso Legal regula el uso del sitio web <strong>mantenimientopcmadrid.es</strong> (en adelante, el «Sitio Web»).
+          El presente Aviso Legal regula el uso del sitio web <strong>mantenimientospcmadrid.es</strong> (en adelante, el «Sitio Web»).
           La navegación por el Sitio Web atribuye la condición de usuario del mismo e implica la aceptación
           plena y sin reservas de todas y cada una de las disposiciones incluidas en este Aviso Legal.
         </p>
