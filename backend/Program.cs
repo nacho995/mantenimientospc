@@ -75,7 +75,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new()
     {
-        Title = "Mantenimiento PC Madrid API",
+        Title = "Mantenimientos PC Madrid API",
         Version = "v1",
         Description = "Backend API para el formulario de contacto",
     });

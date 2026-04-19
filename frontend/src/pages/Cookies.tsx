@@ -159,7 +159,7 @@ export function Cookies(): React.JSX.Element {
       <section>
         <h2>6. Actualización de la política de cookies</h2>
         <p>
-          Mantenimiento PC Madrid puede modificar esta Política de Cookies en función de cambios legislativos,
+          Mantenimientos PC Madrid puede modificar esta Política de Cookies en función de cambios legislativos,
           regulatorios o con la finalidad de adaptar dicha política a las instrucciones dictadas por la
           Agencia Española de Protección de Datos. Se recomienda al usuario que revise esta política
           periódicamente.

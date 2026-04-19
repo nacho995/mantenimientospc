@@ -9,7 +9,7 @@ export function Privacidad(): React.JSX.Element {
         <h2>1. Responsable del tratamiento</h2>
         <p>De conformidad con lo dispuesto en el Reglamento General de Protección de Datos (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos que:</p>
         <ul>
-          <li><strong>Responsable:</strong> Mantenimiento PC Madrid</li>
+          <li><strong>Responsable:</strong> Mantenimientos PC Madrid</li>
           <li><strong>Dirección:</strong> {CONTACT_INFO.address}</li>
           <li><strong>Correo electrónico:</strong> {CONTACT_INFO.email}</li>
           <li><strong>Teléfono:</strong> {CONTACT_INFO.phone}</li>
@@ -99,7 +99,7 @@ export function Privacidad(): React.JSX.Element {
       <section>
         <h2>8. Medidas de seguridad</h2>
         <p>
-          Mantenimiento PC Madrid ha adoptado las medidas técnicas y organizativas necesarias para garantizar
+          Mantenimientos PC Madrid ha adoptado las medidas técnicas y organizativas necesarias para garantizar
           la seguridad e integridad de los datos personales que trata, evitando su alteración, pérdida,
           tratamiento o acceso no autorizado, conforme al estado de la tecnología, la naturaleza de los
           datos almacenados y los riesgos a los que están expuestos.
@@ -109,7 +109,7 @@ export function Privacidad(): React.JSX.Element {
       <section>
         <h2>9. Modificaciones de la política de privacidad</h2>
         <p>
-          Mantenimiento PC Madrid se reserva el derecho a modificar la presente Política de Privacidad para
+          Mantenimientos PC Madrid se reserva el derecho a modificar la presente Política de Privacidad para
           adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas del sector. En dichos
           supuestos, se anunciará en esta página los cambios introducidos con razonable antelación a su puesta
           en práctica.

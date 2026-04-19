@@ -47,9 +47,9 @@ export function Navbar(): React.JSX.Element {
       <div className="navbar__container">
         <a href="#inicio" className="navbar__brand" onClick={() => handleNavClick('#inicio')}>
           <div className="navbar__logo">
-            <img src="/logo.jpeg" alt="Mantenimiento PC" width="120" height="120" style={{ borderRadius: '18px', objectFit: 'contain', display: 'block' }} />
+            <img src="/logo.jpeg" alt="Mantenimientos PC" width="120" height="120" style={{ borderRadius: '18px', objectFit: 'contain', display: 'block' }} />
           </div>
-          <span className="navbar__name">Mantenimiento<strong>PC</strong></span>
+          <span className="navbar__name">Mantenimientos<strong>PC</strong></span>
         </a>
 
         <div className={`navbar__links ${isMenuOpen ? 'navbar__links--open' : ''}`}>

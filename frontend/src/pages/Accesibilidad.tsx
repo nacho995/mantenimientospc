@@ -8,7 +8,7 @@ export function Accesibilidad(): React.JSX.Element {
       <section>
         <h2>1. Compromiso con la accesibilidad</h2>
         <p>
-          Mantenimiento PC Madrid se compromete a garantizar la accesibilidad digital de su sitio web
+          Mantenimientos PC Madrid se compromete a garantizar la accesibilidad digital de su sitio web
           para todas las personas, incluidas aquellas con discapacidades. Trabajamos continuamente para
           mejorar la experiencia de usuario y aplicar las normas de accesibilidad pertinentes.
         </p>
@@ -75,7 +75,7 @@ export function Accesibilidad(): React.JSX.Element {
         <p>
           Esta declaración de accesibilidad fue preparada el 1 de marzo de 2026. La última revisión
           se realizó el 1 de marzo de 2026 mediante una autoevaluación llevada a cabo por
-          Mantenimiento PC Madrid.
+          Mantenimientos PC Madrid.
         </p>
       </section>
 

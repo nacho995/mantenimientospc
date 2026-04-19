@@ -139,7 +139,7 @@ public sealed class ResendEmailService : IEmailService
             var message = new EmailMessage
             {
                 From = $"{_settings.FromName} <{_settings.FromEmail}>",
-                Subject = "Hemos recibido tu mensaje - Mantenimiento PC Madrid",
+                Subject = "Hemos recibido tu mensaje - Mantenimientos PC Madrid",
                 HtmlBody = BuildConfirmationHtmlBody(request),
                 TextBody = BuildConfirmationTextBody(request),
             };
@@ -188,7 +188,7 @@ public sealed class ResendEmailService : IEmailService
                       <tr>
                         <td style="padding:28px 24px;color:#1e293b;font-size:15px;line-height:1.6;font-family:Arial,Helvetica,sans-serif;">
                           <p style="margin:0 0 16px;">Hola <strong>{nombre}</strong>,</p>
-                          <p style="margin:0 0 16px;">Gracias por ponerte en contacto con <strong>Mantenimiento PC Madrid</strong>. Tu solicitud ha sido recibida correctamente y uno de nuestros técnicos la revisará lo antes posible.</p>
+                          <p style="margin:0 0 16px;">Gracias por ponerte en contacto con <strong>Mantenimientos PC Madrid</strong>. Tu solicitud ha sido recibida correctamente y uno de nuestros técnicos la revisará lo antes posible.</p>
                           <p style="margin:0 0 16px;">Nos pondremos en contacto contigo a la mayor brevedad, normalmente en menos de 24 horas laborables.</p>
                           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f1f5f9;border-radius:6px;margin:20px 0;">
                             <tr>
@@ -199,7 +199,7 @@ public sealed class ResendEmailService : IEmailService
                             </tr>
                           </table>
                           <p style="margin:16px 0 0;">Si tu consulta es urgente, también puedes llamarnos directamente al teléfono que aparece en nuestra web.</p>
-                          <p style="margin:24px 0 0;color:#64748b;font-size:14px;">Un saludo,<br><strong>El equipo de Mantenimiento PC Madrid</strong></p>
+                          <p style="margin:24px 0 0;color:#64748b;font-size:14px;">Un saludo,<br><strong>El equipo de Mantenimientos PC Madrid</strong></p>
                         </td>
                       </tr>
                       <tr>
@@ -221,7 +221,7 @@ public sealed class ResendEmailService : IEmailService
         var sb = new StringBuilder();
         sb.AppendLine($"Hola {request.Nombre.Trim()},");
         sb.AppendLine();
-        sb.AppendLine("Gracias por ponerte en contacto con Mantenimiento PC Madrid.");
+        sb.AppendLine("Gracias por ponerte en contacto con Mantenimientos PC Madrid.");
         sb.AppendLine("Tu solicitud ha sido recibida correctamente y uno de nuestros");
         sb.AppendLine("técnicos la revisará lo antes posible.");
         sb.AppendLine();
@@ -232,7 +232,7 @@ public sealed class ResendEmailService : IEmailService
         sb.AppendLine(request.Mensaje.Trim());
         sb.AppendLine();
         sb.AppendLine("Un saludo,");
-        sb.AppendLine("El equipo de Mantenimiento PC Madrid");
+        sb.AppendLine("El equipo de Mantenimientos PC Madrid");
         sb.AppendLine();
         sb.AppendLine("---");
         sb.AppendLine("Este es un email automático de confirmación. No es necesario que respondas.");

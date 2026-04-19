@@ -14,10 +14,10 @@ export function Footer(): React.JSX.Element {
         <div className="footer__top">
           <div className="footer__brand">
             <div className="footer__brand-logo">
-              <img src="/logo.jpeg" alt="Mantenimiento PC" width="180" height="180" style={{ borderRadius: '22px', objectFit: 'contain', boxShadow: '0 10px 40px rgba(14, 116, 144, 0.55), 0 0 0 3px rgba(14, 165, 189, 0.45)', display: 'block' }} />
+              <img src="/logo.jpeg" alt="Mantenimientos PC" width="180" height="180" style={{ borderRadius: '22px', objectFit: 'contain', boxShadow: '0 10px 40px rgba(14, 116, 144, 0.55), 0 0 0 3px rgba(14, 165, 189, 0.45)', display: 'block' }} />
               <div>
                 <p className="footer__name">
-                  Mantenimiento<strong>PC</strong> Madrid
+                  Mantenimientos<strong>PC</strong> Madrid
                 </p>
                 <p className="footer__tagline">
                   Tecnologia de confianza desde 1995. Tu partner IT en Madrid.
@@ -93,7 +93,7 @@ export function Footer(): React.JSX.Element {
 
         {/* Bottom */}
         <div className="footer__bottom">
-          <p>&copy; {currentYear} Mantenimiento PC Madrid. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} Mantenimientos PC Madrid. Todos los derechos reservados.</p>
           <div className="footer__social">
             <a href="#" className="footer__social-link" aria-label="LinkedIn">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
