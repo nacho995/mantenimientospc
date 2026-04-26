@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for mantenimientoslaptop-api-aged-grass-2064 on 2026-03-10T19:08:07+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mantenimientoslaptop-api-aged-grass-2064'
+primary_region = 'cdg'
+
+[build]
+
+[env]
+  ASPNETCORE_ENVIRONMENT = 'Production'
+  ASPNETCORE_URLS = 'http://+:5000'
+
+[http_service]
+  internal_port = 5000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = '2gb'
+  cpus = 1
+  memory_mb = 2048
